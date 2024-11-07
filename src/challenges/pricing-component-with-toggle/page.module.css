@@ -1,14 +1,98 @@
 .main {
-  background-color: hsl(0, 0%, 90%);
-  --primary-colour: hsl(12.8deg 46.01% 31.96%);
-  --accent-light: rgb(255 247 252);
-  --accent-colour: hsl(332.61deg 34.33% 26.27%);
+  --primary-colour: rgb(124 127 228);
+  --primary-light: rgb(159 162 239);
+
+  background-color: rgb(247 247 255);
+  padding: 2rem;
+  color: rgb(73 78 96);
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .container {
-  background-color: white;
   font-family: Arial, Helvetica, sans-serif;
-  color: #333;
+  text-align: center;
+}
+
+.toggleContainer {
+  color: rgb(73 78 96 / 52%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 auto;
+}
+.toggle {
+  display: inline-block;
+  appearance: none;
+  position: relative;
+  width: 2rem;
+  height: 1.5rem;
+}
+
+.toggle::checked::after {
+  background-color: var(--primary-light);
+}
+
+.toggle::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background-color: var(--primary-colour);
+  border-radius: 10px;
+
+  pointer-events: none;
+}
+
+.pricingTable {
+  margin-top: 3rem;
+}
+.pricingSection {
+  padding: 2rem 1rem;
+  background-color: white;
+  border-radius: 9px;
+  box-shadow: 0 0 10px #ddd;
+}
+
+.pricingSection + .pricingSection {
+  margin-top: 1rem;
+}
+
+.pricingTitle {
+  margin-top: 0;
+}
+.pricingList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.pricingListItem {
+  padding: 1rem;
+}
+
+.pricingListItem + .pricingListItem {
+  border-top: 1px solid #ddd;
+}
+
+.pricingListItemBig {
+}
+
+.button {
+  background-color: var(--primary-colour);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: block;
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 @media screen and (min-width: 1080px) {
@@ -19,5 +103,22 @@
   .container {
     padding: 2rem;
     border-radius: 1rem;
+  }
+
+  .pricingTable {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .pricingSection {
+    flex: 1 0 auto;
+  }
+
+  .pricingSection:nth-child(2) {
+    font-size: 1.5rem;
+  }
+
+  .pricingSection + .pricingSection {
+    margin-top: 0;
   }
 }
