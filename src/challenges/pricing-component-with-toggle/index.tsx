@@ -1,10 +1,12 @@
-import "./page.css";
+import styles from "./page.module.css";
 
 function Page() {
   return (
-    <>
-      <h1>Pricing Component with Toggle</h1>
-    </>
+    <main className={styles.main}>
+      <article className={styles.container}>
+        <h1>Pricing</h1>
+      </article>
+    </main>
   );
 }
 

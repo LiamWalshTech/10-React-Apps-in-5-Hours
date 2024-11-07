@@ -1,10 +1,12 @@
-import "./page.css";
+import styles from "./page.module.css";
 
 function Page() {
   return (
-    <>
-      <h1>Rock, Paper, Scissors Game</h1>
-    </>
+    <main className={styles.main}>
+      <article className={styles.container}>
+        <h1>Rock Paper</h1>
+      </article>
+    </main>
   );
 }
 

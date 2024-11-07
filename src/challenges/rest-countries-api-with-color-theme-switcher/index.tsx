@@ -1,10 +1,12 @@
-import "./page.css";
+import styles from "./page.module.css";
 
 function Page() {
   return (
-    <>
-      <h1>REST Countries API with Colour Theme Switcher</h1>
-    </>
+    <main className={styles.main}>
+      <article className={styles.container}>
+        <h1>REST</h1>
+      </article>
+    </main>
   );
 }
 
