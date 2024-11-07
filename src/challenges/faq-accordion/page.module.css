@@ -3,12 +3,55 @@
   --primary-colour: hsl(12.8deg 46.01% 31.96%);
   --accent-light: rgb(255 247 252);
   --accent-colour: hsl(332.61deg 34.33% 26.27%);
+
+  padding: 4rem;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 .container {
   background-color: white;
   font-family: Arial, Helvetica, sans-serif;
   color: #333;
+  padding: 2rem;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.title {
+  margin-top: 0;
+}
+
+.accordion {
+}
+.accordionSection {
+}
+
+.accordionContent {
+  display: none;
+}
+
+.accordionContent.accordionActive {
+  display: block;
+}
+
+.accordionButton {
+  display: block;
+  appearance: none;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  text-align: left;
+  padding: 1rem 0;
+}
+
+.accordionButton::after {
+}
+
+.accordionContent {
 }
 
 @media screen and (min-width: 1080px) {
