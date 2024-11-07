@@ -1,0 +1,95 @@
+:root {
+  --primary-colour: rgb(43 179 177);
+  --primary-light: rgb(74 190 189);
+  --primary-lightest: rgb(255 255 255);
+  --accent-colour: rgb(191 223 50);
+}
+
+#root {
+  height: 100vh;
+  width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 5rem;
+  background: rgb(230 239 246);
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.price-grid {
+  display: grid;
+  border-radius: 7px;
+  overflow: hidden;
+}
+
+.price-grid-section {
+  background-color: var(--primary-lightest);
+  padding: 1rem 1.8rem;
+}
+
+.price-grid-section--primary {
+  background-color: var(--primary-colour);
+  color: white;
+}
+
+.price-grid-section--lightest {
+  background-color: var(--primary-lightest);
+}
+.price-grid-section--light {
+  background-color: var(--primary-light);
+  color: white;
+}
+
+.section-title {
+  color: var(--primary-colour);
+}
+
+.section-title--light {
+  color: white;
+}
+
+.accent {
+  color: var(--accent-colour);
+}
+.section-title {
+}
+.enlarge {
+}
+.button {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--accent-colour);
+  border-radius: 7px;
+  box-shadow: 0 5px 7px #333;
+}
+.section-title {
+}
+.plain-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1080px) {
+  .price-grid {
+    max-width: 50rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "top top"
+      "bottom1 bottom2";
+  }
+
+  .price-grid-section--primary {
+    grid-area: top;
+  }
+
+  .price-grid-section--lightest {
+    grid-area: bottom1;
+  }
+  .price-grid-section--light {
+    grid-area: bottom2;
+  }
+}

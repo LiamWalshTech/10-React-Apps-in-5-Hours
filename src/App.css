@@ -3,16 +3,16 @@ body,
 #root {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  height: 100vh;
 }
 
-#root {
-  display: grid;
-  place-content: center;
+/* Reset the box-model */
+div {
+  box-sizing: border-box;
 }
 
-img {
-  width: 100%;
-  height: 100%;
+/* Pass down the box-sizing property */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
 }
