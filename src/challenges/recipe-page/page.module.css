@@ -1,0 +1,66 @@
+.main {
+  background-color: hsl(0, 0%, 90%);
+  --primary-colour: hsl(12.8deg 46.01% 31.96%);
+  --accent-light: rgb(255 247 252);
+  --accent-colour: hsl(332.61deg 34.33% 26.27%);
+}
+
+.container {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+}
+
+.article {
+  padding: 2rem;
+}
+
+.title {
+  margin-top: 0;
+  font-size: 2rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.prepBox {
+  background-color: var(--accent-light);
+  padding: 0.2rem 1rem;
+  border-radius: 8px;
+}
+
+.hero {
+  display: block;
+  width: 100%;
+}
+
+.list {
+  margin: 0 0 0 1rem;
+  padding: 0;
+}
+.sectionTitle {
+}
+.orderedList {
+}
+.listItem {
+  padding: 0.5rem 1rem;
+}
+
+.listItem::marker {
+  color: var(--accent-colour);
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1080px) {
+  .main {
+    padding: 10rem;
+  }
+
+  .container {
+    padding: 2rem;
+    border-radius: 1rem;
+  }
+
+  .hero {
+    border-radius: 1rem;
+    overflow: hidden;
+  }
+}

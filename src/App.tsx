@@ -2,7 +2,7 @@ import "./App.css";
 
 const App = () => (
   <>
-    <img src="https://i.ytimg.com/vi/h2jLEtVVlP0/maxresdefault.jpg" />
+    {/* <img src="https://i.ytimg.com/vi/h2jLEtVVlP0/maxresdefault.jpg" /> */}
 
     <h1>Ignore that nonsesne</h1>
     <nav>
